@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Адміністративна панель — КІТ НТУ</title>
+</head>
+<body>
+
+  <!-- ШАПКА АДМІНКИ -->
+  <table width="100%" border="1" cellpadding="8" cellspacing="0" bgcolor="#333333">
+    <tr>
+      <td>
+        <font color="white"><b>АДМІНІСТРАТИВНА ПАНЕЛЬ — Сайт кафедри КІТ НТУ</b></font>
+      </td>
+      <td align="right">
+        <font color="white">Адміністратор: <b>admin@ntu.edu.ua</b></font>
+        &nbsp;|&nbsp;
+        <a href="index.html"><font color="yellow">Переглянути сайт</font></a>
+        &nbsp;|&nbsp;
+        <a href="logout.php"><font color="yellow">Вийти</font></a>
+      </td>
+    </tr>
+  </table>
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr valign="top">
+
+      <!-- ЛІВЕ МЕНЮ АДМІНКИ -->
+      <td width="200" bgcolor="#eeeeee">
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+
+          <tr><td bgcolor="#555555"><font color="white"><b>Управління контентом</b></font></td></tr>
+          <tr><td><a href="admin_news.html">📰 Новини</a></td></tr>
+          <tr><td><a href="admin_pages.html">📄 Сторінки сайту</a></td></tr>
+          <tr><td><a href="admin_staff.html">👥 Склад кафедри</a></td></tr>
+          <tr><td><a href="admin_programs.html">🎓 Навчальні програми</a></td></tr>
+          <tr><td><a href="admin_materials.html">📁 Матеріали</a></td></tr>
+          <tr><td><a href="admin_publications.html">📚 Публікації</a></td></tr>
+          <tr><td><a href="admin_schedule.html">🗓 Розклад</a></td></tr>
+
+          <tr><td bgcolor="#555555"><font color="white"><b>Користувачі</b></font></td></tr>
+          <tr><td><a href="admin_users.html">👤 Список користувачів</a></td></tr>
+          <tr><td><a href="admin_roles.html">🔑 Ролі та права</a></td></tr>
+          <tr><td><a href="admin_comments.html">💬 Коментарі</a></td></tr>
+          <tr><td><a href="admin_messages.html">✉ Повідомлення</a></td></tr>
+
+          <tr><td bgcolor="#555555"><font color="white"><b>Система</b></font></td></tr>
+          <tr><td><a href="admin_stats.html">📊 Статистика</a></td></tr>
+          <tr><td><a href="admin_settings.html">⚙ Налаштування</a></td></tr>
+          <tr><td><a href="admin_backup.html">💾 Резервна копія</a></td></tr>
+          <tr><td><a href="admin_logs.html">📋 Журнал подій</a></td></tr>
+
+        </table>
+      </td>
+
+      <!-- ОСНОВНА ОБЛАСТЬ АДМІНКИ -->
+      <td>
+        <table border="0" cellpadding="16" cellspacing="0" width="100%">
+          <tr>
+            <td>
+              <h2>Панель керування</h2>
+              <p>Ласкаво просимо до адміністративної панелі сайту кафедри.</p>
+
+              <!-- Статистика -->
+              <h3>Зведена статистика</h3>
+              <table border="1" cellpadding="10" cellspacing="0">
+                <tr bgcolor="#e8e8e8">
+                  <th>Показник</th>
+                  <th>Значення</th>
+                  <th>Змінено</th>
+                </tr>
+                <tr>
+                  <td>Відвідувачів сьогодні</td>
+                  <td align="center"><b>142</b></td>
+                  <td><font color="green">▲ +18 від вчора</font></td>
+                </tr>
+                <tr>
+                  <td>Відвідувачів цього місяця</td>
+                  <td align="center"><b>3 847</b></td>
+                  <td><font color="green">▲ +12%</font></td>
+                </tr>
+                <tr>
+                  <td>Зареєстрованих користувачів</td>
+                  <td align="center"><b>289</b></td>
+                  <td>+3 за тиждень</td>
+                </tr>
+                <tr>
+                  <td>Опублікованих новин</td>
+                  <td align="center"><b>47</b></td>
+                  <td>Остання: 12.03.2025</td>
+                </tr>
+                <tr>
+                  <td>Коментарів на модерації</td>
+                  <td align="center"><font color="red"><b>5</b></font></td>
+                  <td><a href="admin_comments.html">Переглянути</a></td>
+                </tr>
+                <tr>
+                  <td>Нових повідомлень (форма)</td>
+                  <td align="center"><font color="red"><b>3</b></font></td>
+                  <td><a href="admin_messages.html">Переглянути</a></td>
+                </tr>
+              </table>
+
+              <br>
+
+              <!-- Швидкі дії -->
+              <h3>Швидкі дії</h3>
+              <table border="0" cellpadding="6" cellspacing="4">
+                <tr>
+                  <td>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                      <tr><td bgcolor="#d0e8d0">
+                        <b><a href="admin_news_add.html">+ Додати новину</a></b>
+                      </td></tr>
+                    </table>
+                  </td>
+                  <td>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                      <tr><td bgcolor="#d0e8d0">
+                        <b><a href="admin_staff_add.html">+ Додати викладача</a></b>
+                      </td></tr>
+                    </table>
+                  </td>
+                  <td>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                      <tr><td bgcolor="#d0e8d0">
+                        <b><a href="admin_materials_add.html">+ Завантажити матеріал</a></b>
+                      </td></tr>
+                    </table>
+                  </td>
+                  <td>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                      <tr><td bgcolor="#d0d0e8">
+                        <b><a href="admin_comments.html">Модерувати коментарі (5)</a></b>
+                      </td></tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <br>
+
+              <!-- Останні дії -->
+              <h3>Журнал останніх дій</h3>
+              <table border="1" cellpadding="8" cellspacing="0" width="100%">
+                <tr bgcolor="#e8e8e8">
+                  <th>Дата/Час</th>
+                  <th>Користувач</th>
+                  <th>Дія</th>
+                  <th>Об'єкт</th>
+                </tr>
+                <tr>
+                  <td>12.03.2025 14:32</td>
+                  <td>admin</td>
+                  <td>Додано новину</td>
+                  <td>«Перемога на олімпіаді»</td>
+                </tr>
+                <tr>
+                  <td>11.03.2025 10:15</td>
+                  <td>admin</td>
+                  <td>Відредаговано профіль</td>
+                  <td>Коваленко І.П.</td>
+                </tr>
+                <tr>
+                  <td>10.03.2025 16:48</td>
+                  <td>moderator1</td>
+                  <td>Видалено коментар</td>
+                  <td>ID #342 (спам)</td>
+                </tr>
+                <tr>
+                  <td>09.03.2025 09:20</td>
+                  <td>admin</td>
+                  <td>Завантажено файл</td>
+                  <td>syllabus_db_2025.pdf</td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+        </table>
+      </td>
+
+    </tr>
+  </table>
+
+  <!-- ПІДВАЛ АДМІНКИ -->
+  <table width="100%" border="1" cellpadding="6" cellspacing="0" bgcolor="#333333">
+    <tr>
+      <td align="center">
+        <font color="white">Адміністративна панель © 2025 — Сайт кафедри КІТ НТУ</font>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

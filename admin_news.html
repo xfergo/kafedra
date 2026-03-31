@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Управління новинами — Адмінпанель КІТ НТУ</title>
+</head>
+<body>
+
+  <!-- ШАПКА АДМІНКИ -->
+  <table width="100%" border="1" cellpadding="8" cellspacing="0" bgcolor="#333333">
+    <tr>
+      <td><font color="white"><b>АДМІНІСТРАТИВНА ПАНЕЛЬ — КІТ НТУ</b></font></td>
+      <td align="right">
+        <a href="index.html"><font color="yellow">Переглянути сайт</font></a>
+        &nbsp;|&nbsp;
+        <a href="logout.php"><font color="yellow">Вийти</font></a>
+      </td>
+    </tr>
+  </table>
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr valign="top">
+
+      <!-- ЛІВЕ МЕНЮ -->
+      <td width="200" bgcolor="#eeeeee">
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+          <tr><td bgcolor="#555555"><font color="white"><b>Управління контентом</b></font></td></tr>
+          <tr><td bgcolor="#ddddff"><b><a href="admin_news.html">📰 Новини</a></b></td></tr>
+          <tr><td><a href="admin_pages.html">📄 Сторінки сайту</a></td></tr>
+          <tr><td><a href="admin_staff.html">👥 Склад кафедри</a></td></tr>
+          <tr><td><a href="admin_programs.html">🎓 Навчальні програми</a></td></tr>
+          <tr><td><a href="admin_materials.html">📁 Матеріали</a></td></tr>
+          <tr><td><a href="admin_publications.html">📚 Публікації</a></td></tr>
+          <tr><td bgcolor="#555555"><font color="white"><b>Користувачі</b></font></td></tr>
+          <tr><td><a href="admin_users.html">👤 Список користувачів</a></td></tr>
+          <tr><td><a href="admin_comments.html">💬 Коментарі</a></td></tr>
+          <tr><td bgcolor="#555555"><font color="white"><b>Система</b></font></td></tr>
+          <tr><td><a href="admin_stats.html">📊 Статистика</a></td></tr>
+          <tr><td><a href="admin_settings.html">⚙ Налаштування</a></td></tr>
+          <tr><td><a href="admin.html">← Головна панелі</a></td></tr>
+        </table>
+      </td>
+
+      <!-- ОСНОВНА ОБЛАСТЬ -->
+      <td>
+        <table border="0" cellpadding="16" width="100%">
+          <tr>
+            <td>
+              <h2>Управління новинами</h2>
+              <p>
+                <a href="admin.html">Панель керування</a> &raquo; Новини
+              </p>
+
+              <!-- Додавання нової новини -->
+              <h3>Додати нову новину</h3>
+              <form action="admin_news_save.php" method="post" enctype="multipart/form-data">
+                <table border="1" cellpadding="8" cellspacing="0">
+
+                  <tr>
+                    <td width="180" bgcolor="#e8e8e8"><b>Заголовок *</b></td>
+                    <td><input type="text" name="title" size="60" maxlength="255"></td>
+                  </tr>
+
+                  <tr>
+                    <td bgcolor="#e8e8e8"><b>Категорія *</b></td>
+                    <td>
+                      <select name="category">
+                        <option value="">-- Оберіть --</option>
+                        <option value="science">Наукові події</option>
+                        <option value="study">Навчання</option>
+                        <option value="partnership">Партнерство</option>
+                        <option value="conference">Конференції</option>
+                        <option value="student">Студентське життя</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td bgcolor="#e8e8e8"><b>Короткий опис *</b></td>
+                    <td><textarea name="excerpt" rows="3" cols="60"></textarea></td>
+                  </tr>
+
+                  <tr>
+                    <td bgcolor="#e8e8e8" valign="top"><b>Повний текст *</b></td>
+                    <td><textarea name="content" rows="10" cols="60"></textarea></td>
+                  </tr>
+
+                  <tr>
+                    <td bgcolor="#e8e8e8"><b>Фото новини</b></td>
+                    <td><input type="file" name="photo" accept="image/*"></td>
+                  </tr>
+
+                  <tr>
+                    <td bgcolor="#e8e8e8"><b>Дата публікації *</b></td>
+                    <td><input type="text" name="date" value="23.03.2025" size="15"></td>
+                  </tr>
+
+                  <tr>
+                    <td bgcolor="#e8e8e8"><b>Статус</b></td>
+                    <td>
+                      <input type="radio" name="status" value="published" checked> Опубліковано
+                      &nbsp;
+                      <input type="radio" name="status" value="draft"> Чернетка
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2" align="center">
+                      <input type="submit" value="Зберегти новину">
+                      &nbsp;
+                      <input type="reset" value="Очистити форму">
+                    </td>
+                  </tr>
+                </table>
+              </form>
+
+              <hr>
+
+              <!-- Список існуючих новин -->
+              <h3>Опубліковані новини</h3>
+
+              <table border="1" cellpadding="8" cellspacing="0" width="100%">
+                <tr bgcolor="#e8e8e8">
+                  <th width="40">ID</th>
+                  <th width="100">Дата</th>
+                  <th>Заголовок</th>
+                  <th width="120">Категорія</th>
+                  <th width="80">Статус</th>
+                  <th width="130">Дії</th>
+                </tr>
+                <tr>
+                  <td align="center">47</td>
+                  <td>12.03.2025</td>
+                  <td><a href="news_detail.html?id=1">Студенти кафедри посіли I місце на олімпіаді</a></td>
+                  <td>Наукові події</td>
+                  <td align="center"><font color="green">Опубліковано</font></td>
+                  <td align="center">
+                    <a href="admin_news_edit.html?id=47">Редагувати</a> |
+                    <a href="admin_news_delete.php?id=47" onclick="return confirm('Видалити?')">Видалити</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">46</td>
+                  <td>05.03.2025</td>
+                  <td><a href="news_detail.html?id=2">Відкрита лекція від GlobalLogic</a></td>
+                  <td>Партнерство</td>
+                  <td align="center"><font color="green">Опубліковано</font></td>
+                  <td align="center">
+                    <a href="admin_news_edit.html?id=46">Редагувати</a> |
+                    <a href="admin_news_delete.php?id=46" onclick="return confirm('Видалити?')">Видалити</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">45</td>
+                  <td>28.02.2025</td>
+                  <td><a href="news_detail.html?id=3">Договір про співпрацю з SoftServe</a></td>
+                  <td>Партнерство</td>
+                  <td align="center"><font color="orange">Чернетка</font></td>
+                  <td align="center">
+                    <a href="admin_news_edit.html?id=45">Редагувати</a> |
+                    <a href="admin_news_delete.php?id=45" onclick="return confirm('Видалити?')">Видалити</a>
+                  </td>
+                </tr>
+              </table>
+
+              <br>
+              <!-- Пагінація -->
+              <table border="0" cellpadding="4">
+                <tr>
+                  <td>Сторінки:</td>
+                  <td><b>1</b></td>
+                  <td><a href="admin_news.html?page=2">2</a></td>
+                  <td><a href="admin_news.html?page=3">3</a></td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+        </table>
+      </td>
+
+    </tr>
+  </table>
+
+  <!-- ПІДВАЛ -->
+  <table width="100%" border="1" cellpadding="6" cellspacing="0" bgcolor="#333333">
+    <tr>
+      <td align="center">
+        <font color="white">Адміністративна панель © 2025 — КІТ НТУ</font>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

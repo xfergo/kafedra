@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вхід / Реєстрація — КІТ НТУ</title>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <table width="100%" border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <td width="80">
+        <img src="logo.png" alt="Логотип університету" width="70" height="70">
+      </td>
+      <td>
+        <h2>Національний технічний університет</h2>
+        <h3>Кафедра інформаційних технологій та програмної інженерії</h3>
+      </td>
+      <td align="right">
+        <a href="login.html"><b>Увійти</b></a> |
+        <a href="register.html">Реєстрація</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- НАВІГАЦІЯ -->
+  <table width="100%" border="1" cellpadding="6" cellspacing="0">
+    <tr>
+      <td><a href="index.html">Головна</a></td>
+      <td><a href="about.html">Про кафедру</a></td>
+      <td><a href="staff.html">Склад кафедри</a></td>
+      <td><a href="programs.html">Навчальні програми</a></td>
+      <td><a href="schedule.html">Розклад</a></td>
+      <td><a href="science.html">Наука</a></td>
+      <td><a href="news.html">Новини</a></td>
+      <td><a href="contacts.html">Контакти</a></td>
+    </tr>
+  </table>
+
+  <h1>&nbsp;Авторизація</h1>
+  <p>&nbsp;<a href="index.html">Головна</a> &raquo; Вхід</p>
+  <hr>
+
+  <table width="100%" border="0" cellpadding="20">
+    <tr valign="top" align="center">
+
+      <!-- Форма входу -->
+      <td width="50%">
+        <h2>Увійти до особистого кабінету</h2>
+
+        <form action="auth.php" method="post">
+          <input type="hidden" name="action" value="login">
+          <table border="1" cellpadding="10" cellspacing="0">
+
+            <tr>
+              <td colspan="2" bgcolor="#e8e8e8" align="center">
+                <b>Вхід для зареєстрованих користувачів</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td><b>E-mail або логін:</b></td>
+              <td><input type="text" name="login" size="30"></td>
+            </tr>
+
+            <tr>
+              <td><b>Пароль:</b></td>
+              <td><input type="password" name="password" size="30"></td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <input type="checkbox" name="remember" value="1">
+                Запам'ятати мене
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" align="center">
+                <input type="submit" value="Увійти">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" align="center">
+                <a href="forgot_password.html">Забули пароль?</a>
+              </td>
+            </tr>
+
+          </table>
+        </form>
+      </td>
+
+      <!-- Форма реєстрації -->
+      <td width="50%">
+        <h2>Зареєструватись</h2>
+
+        <form action="auth.php" method="post">
+          <input type="hidden" name="action" value="register">
+          <table border="1" cellpadding="10" cellspacing="0">
+
+            <tr>
+              <td colspan="2" bgcolor="#e8e8e8" align="center">
+                <b>Нова реєстрація</b>
+              </td>
+            </tr>
+
+            <tr>
+              <td><b>Прізвище:</b></td>
+              <td><input type="text" name="lastname" size="25"></td>
+            </tr>
+
+            <tr>
+              <td><b>Ім'я:</b></td>
+              <td><input type="text" name="firstname" size="25"></td>
+            </tr>
+
+            <tr>
+              <td><b>По батькові:</b></td>
+              <td><input type="text" name="patronymic" size="25"></td>
+            </tr>
+
+            <tr>
+              <td><b>E-mail:</b></td>
+              <td><input type="text" name="email" size="25"></td>
+            </tr>
+
+            <tr>
+              <td><b>Пароль:</b></td>
+              <td><input type="password" name="password" size="25"></td>
+            </tr>
+
+            <tr>
+              <td><b>Повторити пароль:</b></td>
+              <td><input type="password" name="password2" size="25"></td>
+            </tr>
+
+            <tr>
+              <td><b>Роль:</b></td>
+              <td>
+                <select name="role">
+                  <option value="student">Студент</option>
+                  <option value="teacher">Викладач</option>
+                  <option value="other">Інше</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <input type="checkbox" name="agree" value="1">
+                Погоджуюся з
+                <a href="privacy.html">умовами використання</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" align="center">
+                <input type="submit" value="Зареєструватися">
+              </td>
+            </tr>
+
+          </table>
+        </form>
+      </td>
+
+    </tr>
+  </table>
+
+  <!-- ПІДВАЛ -->
+  <table width="100%" border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <td align="center">
+        <p>© 2025 Кафедра інформаційних технологій та програмної інженерії. НТУ.</p>
+        <a href="index.html">Головна</a> |
+        <a href="contacts.html">Контакти</a>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Управління користувачами — Адмінпанель КІТ НТУ</title>
+</head>
+<body>
+
+  <!-- ШАПКА АДМІНКИ -->
+  <table width="100%" border="1" cellpadding="8" cellspacing="0" bgcolor="#333333">
+    <tr>
+      <td><font color="white"><b>АДМІНІСТРАТИВНА ПАНЕЛЬ — КІТ НТУ</b></font></td>
+      <td align="right">
+        <a href="index.html"><font color="yellow">Переглянути сайт</font></a>
+        &nbsp;|&nbsp;
+        <a href="logout.php"><font color="yellow">Вийти</font></a>
+      </td>
+    </tr>
+  </table>
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr valign="top">
+
+      <!-- ЛІВЕ МЕНЮ -->
+      <td width="200" bgcolor="#eeeeee">
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+          <tr><td bgcolor="#555555"><font color="white"><b>Управління контентом</b></font></td></tr>
+          <tr><td><a href="admin_news.html">📰 Новини</a></td></tr>
+          <tr><td><a href="admin_pages.html">📄 Сторінки сайту</a></td></tr>
+          <tr><td><a href="admin_staff.html">👥 Склад кафедри</a></td></tr>
+          <tr><td><a href="admin_programs.html">🎓 Навчальні програми</a></td></tr>
+          <tr><td><a href="admin_materials.html">📁 Матеріали</a></td></tr>
+          <tr><td bgcolor="#555555"><font color="white"><b>Користувачі</b></font></td></tr>
+          <tr><td bgcolor="#ddddff"><b><a href="admin_users.html">👤 Список користувачів</a></b></td></tr>
+          <tr><td><a href="admin_roles.html">🔑 Ролі та права</a></td></tr>
+          <tr><td><a href="admin_comments.html">💬 Коментарі</a></td></tr>
+          <tr><td bgcolor="#555555"><font color="white"><b>Система</b></font></td></tr>
+          <tr><td><a href="admin_stats.html">📊 Статистика</a></td></tr>
+          <tr><td><a href="admin_settings.html">⚙ Налаштування</a></td></tr>
+          <tr><td><a href="admin.html">← Головна панелі</a></td></tr>
+        </table>
+      </td>
+
+      <!-- ОСНОВНА ОБЛАСТЬ -->
+      <td>
+        <table border="0" cellpadding="16" width="100%">
+          <tr><td>
+
+            <h2>Управління користувачами</h2>
+            <p><a href="admin.html">Панель керування</a> &raquo; Користувачі</p>
+
+            <!-- Фільтр -->
+            <form action="admin_users.html" method="get">
+              <table border="1" cellpadding="6" cellspacing="0">
+                <tr bgcolor="#e8e8e8">
+                  <td colspan="4"><b>Пошук і фільтрація</b></td>
+                </tr>
+                <tr>
+                  <td>Ім'я або e-mail:</td>
+                  <td><input type="text" name="search" size="25"></td>
+                  <td>Роль:</td>
+                  <td>
+                    <select name="role">
+                      <option value="">Всі</option>
+                      <option value="admin">Адміністратор</option>
+                      <option value="student">Студент</option>
+                      <option value="teacher">Викладач</option>
+                      <option value="other">Інше</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Статус:</td>
+                  <td>
+                    <select name="status">
+                      <option value="">Всі</option>
+                      <option value="active">Активні</option>
+                      <option value="blocked">Заблоковані</option>
+                    </select>
+                  </td>
+                  <td colspan="2">
+                    <input type="submit" value="Знайти">
+                    &nbsp;
+                    <a href="admin_users.html">Скинути фільтр</a>
+                  </td>
+                </tr>
+              </table>
+            </form>
+
+            <br>
+
+            <!-- Список користувачів -->
+            <table border="1" cellpadding="8" cellspacing="0" width="100%">
+              <tr bgcolor="#e8e8e8">
+                <th width="40">ID</th>
+                <th>ПІБ</th>
+                <th>E-mail</th>
+                <th>Роль</th>
+                <th>Дата реєстрації</th>
+                <th>Статус</th>
+                <th>Дії</th>
+              </tr>
+              <tr>
+                <td align="center">1</td>
+                <td>Коваленко Іван Петрович</td>
+                <td>kovalenko@ntu.edu.ua</td>
+                <td>Адміністратор</td>
+                <td>01.09.2022</td>
+                <td align="center"><font color="green">Активний</font></td>
+                <td align="center">
+                  <a href="admin_user_edit.html?id=1">Редагувати</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">2</td>
+                <td>Сидоренко Андрій Олексійович</td>
+                <td>sydorenko@ntu.edu.ua</td>
+                <td>Викладач</td>
+                <td>01.09.2022</td>
+                <td align="center"><font color="green">Активний</font></td>
+                <td align="center">
+                  <a href="admin_user_edit.html?id=2">Редагувати</a> |
+                  <a href="admin_user_block.php?id=2" onclick="return confirm('Заблокувати?')">Блокувати</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">15</td>
+                <td>Гриценко Олексій Вікторович</td>
+                <td>grytsenko@student.ntu.edu.ua</td>
+                <td>Студент</td>
+                <td>02.09.2023</td>
+                <td align="center"><font color="green">Активний</font></td>
+                <td align="center">
+                  <a href="admin_user_edit.html?id=15">Редагувати</a> |
+                  <a href="admin_user_block.php?id=15" onclick="return confirm('Заблокувати?')">Блокувати</a>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">87</td>
+                <td>Лисенко Богдан Тарасович</td>
+                <td>lysenko@student.ntu.edu.ua</td>
+                <td>Студент</td>
+                <td>01.09.2024</td>
+                <td align="center"><font color="red">Заблокований</font></td>
+                <td align="center">
+                  <a href="admin_user_edit.html?id=87">Редагувати</a> |
+                  <a href="admin_user_unblock.php?id=87" onclick="return confirm('Розблокувати?')">Розблокувати</a> |
+                  <a href="admin_user_delete.php?id=87" onclick="return confirm('Видалити?')">Видалити</a>
+                </td>
+              </tr>
+            </table>
+
+            <br>
+            <p>Всього користувачів: <b>289</b> | Активних: <b>282</b> | Заблокованих: <b>7</b></p>
+
+            <!-- Пагінація -->
+            <table border="0" cellpadding="4">
+              <tr>
+                <td>Сторінки:</td>
+                <td><b>1</b></td>
+                <td><a href="admin_users.html?page=2">2</a></td>
+                <td><a href="admin_users.html?page=3">3</a></td>
+                <td>...</td>
+                <td><a href="admin_users.html?page=15">15</a></td>
+              </tr>
+            </table>
+
+          </td></tr>
+        </table>
+      </td>
+
+    </tr>
+  </table>
+
+  <!-- ПІДВАЛ -->
+  <table width="100%" border="1" cellpadding="6" cellspacing="0" bgcolor="#333333">
+    <tr>
+      <td align="center">
+        <font color="white">Адміністративна панель © 2025 — КІТ НТУ</font>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

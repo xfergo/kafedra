@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти — КІТ НТУ</title>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <table width="100%" border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <td width="80">
+        <img src="logo.png" alt="Логотип університету" width="70" height="70">
+      </td>
+      <td>
+        <h2>Національний технічний університет</h2>
+        <h3>Кафедра інформаційних технологій та програмної інженерії</h3>
+      </td>
+      <td align="right">
+        <a href="login.html">Увійти</a> |
+        <a href="register.html">Реєстрація</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- НАВІГАЦІЯ -->
+  <table width="100%" border="1" cellpadding="6" cellspacing="0">
+    <tr>
+      <td><a href="index.html">Головна</a></td>
+      <td><a href="about.html">Про кафедру</a></td>
+      <td><a href="staff.html">Склад кафедри</a></td>
+      <td><a href="programs.html">Навчальні програми</a></td>
+      <td><a href="schedule.html">Розклад</a></td>
+      <td><a href="science.html">Наука</a></td>
+      <td><a href="news.html">Новини</a></td>
+      <td><a href="contacts.html"><b>Контакти</b></a></td>
+    </tr>
+  </table>
+
+  <h1>&nbsp;Контакти</h1>
+  <p>&nbsp;<a href="index.html">Головна</a> &raquo; Контакти</p>
+  <hr>
+
+  <table width="100%" border="0" cellpadding="10">
+    <tr valign="top">
+
+      <!-- Контактна інформація -->
+      <td width="350">
+        <h2>Реквізити кафедри</h2>
+
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+          <tr>
+            <td bgcolor="#e8e8e8"><b>Адреса</b></td>
+            <td>вул. Університетська, 14,<br>м. Київ, 03056,<br>Корпус А, кімната 215</td>
+          </tr>
+          <tr>
+            <td bgcolor="#e8e8e8"><b>Телефон</b></td>
+            <td>+38 (044) 123-45-67</td>
+          </tr>
+          <tr>
+            <td bgcolor="#e8e8e8"><b>Факс</b></td>
+            <td>+38 (044) 123-45-68</td>
+          </tr>
+          <tr>
+            <td bgcolor="#e8e8e8"><b>E-mail</b></td>
+            <td><a href="mailto:kafedra@ntu.edu.ua">kafedra@ntu.edu.ua</a></td>
+          </tr>
+          <tr>
+            <td bgcolor="#e8e8e8"><b>Графік роботи</b></td>
+            <td>Пн–Пт: 9:00–18:00<br>Сб–Нд: вихідний</td>
+          </tr>
+          <tr>
+            <td bgcolor="#e8e8e8"><b>Завідувач кафедри</b></td>
+            <td>Коваленко Іван Петрович<br>
+              <a href="mailto:kovalenko@ntu.edu.ua">kovalenko@ntu.edu.ua</a>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#e8e8e8"><b>Секретар</b></td>
+            <td>Іваненко Ольга Дмитрівна<br>
+              Тел.: +38 (044) 123-45-69
+            </td>
+          </tr>
+        </table>
+
+        <br>
+        <h3>Як нас знайти</h3>
+        <p>
+          Станція метро "Університет" (червона лінія), далі 5 хвилин пішки
+          вулицею Університетською. Головний корпус (А) — перший будинок праворуч від
+          головного входу на територію університету.
+        </p>
+        <p><img src="map_placeholder.png" alt="Карта проїзду" width="300" height="200" border="1"></p>
+      </td>
+
+      <!-- Форма зворотного зв'язку -->
+      <td>
+        <h2>Форма зворотного зв'язку</h2>
+        <p>Заповніть форму нижче, і ми зв'яжемося з вами найближчим часом.</p>
+
+        <form action="send_message.php" method="post">
+          <table border="0" cellpadding="6" cellspacing="0">
+
+            <tr>
+              <td><b>Ваше ім'я *</b></td>
+              <td><input type="text" name="name" size="35" maxlength="100"></td>
+            </tr>
+
+            <tr>
+              <td><b>E-mail *</b></td>
+              <td><input type="text" name="email" size="35" maxlength="100"></td>
+            </tr>
+
+            <tr>
+              <td><b>Телефон</b></td>
+              <td><input type="text" name="phone" size="35" maxlength="20"></td>
+            </tr>
+
+            <tr>
+              <td><b>Тема *</b></td>
+              <td>
+                <select name="topic">
+                  <option value="">-- Оберіть тему --</option>
+                  <option value="study">Навчання та вступ</option>
+                  <option value="science">Наукова співпраця</option>
+                  <option value="partnership">Партнерство та стажування</option>
+                  <option value="other">Інше</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top"><b>Повідомлення *</b></td>
+              <td>
+                <textarea name="message" rows="8" cols="40"></textarea>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>
+                <input type="checkbox" name="agree" value="1">
+                Я погоджуюся з
+                <a href="privacy.html">політикою конфіденційності</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>
+                <input type="submit" value="Надіслати повідомлення">
+                &nbsp;
+                <input type="reset" value="Очистити">
+              </td>
+            </tr>
+
+          </table>
+        </form>
+
+        <p><i>* — поля, обов'язкові для заповнення</i></p>
+      </td>
+
+    </tr>
+  </table>
+
+  <!-- ПІДВАЛ -->
+  <table width="100%" border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <td align="center">
+        <p>© 2025 Кафедра інформаційних технологій та програмної інженерії. НТУ.</p>
+        <a href="index.html">Головна</a> |
+        <a href="about.html">Про кафедру</a> |
+        <a href="contacts.html">Контакти</a>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
