@@ -4,188 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Склад кафедри — КІТ НТУ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ШАПКА -->
-  <table width="100%" border="1" cellpadding="8" cellspacing="0">
-    <tr>
-      <td width="80">
-        <img src="logo.png" alt="Логотип університету" width="70" height="70">
-      </td>
-      <td>
+  <header class="site-header">
+    <div class="logo-section">
+      <img src="logo.png" alt="Логотип університету" width="70" height="70">
+      <div>
         <h2>Національний технічний університет</h2>
         <h3>Кафедра інформаційних технологій та програмної інженерії</h3>
-      </td>
-      <td align="right">
-        <a href="login.html">Увійти</a> |
-        <a href="register.html">Реєстрація</a>
-      </td>
-    </tr>
-  </table>
+      </div>
+    </div>
+    <div class="auth-links">
+      <a href="login.html">Увійти</a> |
+      <a href="register.html">Реєстрація</a>
+    </div>
+  </header>
 
-  <!-- НАВІГАЦІЯ -->
-  <table width="100%" border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <td><a href="index.html">Головна</a></td>
-      <td><a href="about.html">Про кафедру</a></td>
-      <td><a href="staff.html"><b>Склад кафедри</b></a></td>
-      <td><a href="programs.html">Навчальні програми</a></td>
-      <td><a href="schedule.html">Розклад</a></td>
-      <td><a href="science.html">Наука</a></td>
-      <td><a href="news.html">Новини</a></td>
-      <td><a href="contacts.html">Контакти</a></td>
-    </tr>
-  </table>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="about.html">Про кафедру</a></li>
+      <li><a href="staff.html" class="active">Склад кафедри</a></li>
+      <li><a href="programs.html">Навчальні програми</a></li>
+      <li><a href="schedule.html">Розклад</a></li>
+      <li><a href="science.html">Наука</a></li>
+      <li><a href="news.html">Новини</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+  </nav>
 
-  <!-- ЗАГОЛОВОК СТОРІНКИ -->
-  <h1>&nbsp;Склад кафедри</h1>
-  <p>&nbsp;<a href="index.html">Головна</a> &raquo; Склад кафедри</p>
-  <hr>
+  <div class="container">
+    <aside class="sidebar">
+      <h4>Категорії</h4>
+      <ul>
+        <li><a href="#professors">Професори</a></li>
+        <li><a href="#docents">Доценти</a></li>
+        <li><a href="#assistants">Асистенти</a></li>
+        <li><a href="#phd-students">Аспіранти</a></li>
+      </ul>
+    </aside>
 
-  <!-- ОСНОВНИЙ КОНТЕНТ -->
-  <table width="100%" border="0" cellpadding="10">
-    <tr valign="top">
+    <main class="content">
+      <h1>Склад кафедри</h1>
+      <p><a href="index.html">Головна</a> &raquo; Склад кафедри</p>
+      <hr>
 
-      <!-- Ліва колонка -->
-      <td width="200" bgcolor="#f0f0f0">
-        <table border="1" cellpadding="6" cellspacing="0" width="100%">
-          <tr><td bgcolor="#cccccc"><b>Категорії</b></td></tr>
-          <tr><td><a href="#professors">Професори</a></td></tr>
-          <tr><td><a href="#docents">Доценти</a></td></tr>
-          <tr><td><a href="#assistants">Асистенти</a></td></tr>
-          <tr><td><a href="#phd-students">Аспіранти</a></td></tr>
-        </table>
-      </td>
-
-      <!-- Центральна колонка -->
-      <td>
-
-        <a name="professors"></a>
-        <h2>Завідувач кафедри</h2>
-
-        <table border="1" cellpadding="8" cellspacing="0" width="100%">
-          <tr bgcolor="#e8e8e8">
+      <h2 id="professors">Завідувач кафедри</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
             <th width="80">Фото</th>
             <th>ПІБ</th>
             <th>Посада / Звання</th>
             <th>Дисципліни</th>
             <th>Контакт</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
-            <td align="center"><img src="photos/kovalenko.jpg" alt="Фото" width="60" height="70"></td>
+            <td style="text-align: center;"><img src="photos/kovalenko.jpg" alt="Фото" width="60" height="70"></td>
             <td><a href="staff_profile.html?id=1">Коваленко Іван Петрович</a></td>
             <td>Завідувач кафедри,<br>д-р техн. наук, професор</td>
             <td>Теорія алгоритмів,<br>Штучний інтелект</td>
             <td><a href="mailto:kovalenko@ntu.edu.ua">kovalenko@ntu.edu.ua</a></td>
           </tr>
-        </table>
+        </tbody>
+      </table>
 
-        <br>
-        <h2>Професори</h2>
-
-        <table border="1" cellpadding="8" cellspacing="0" width="100%">
-          <tr bgcolor="#e8e8e8">
+      <h2>Професори</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
             <th width="80">Фото</th>
             <th>ПІБ</th>
             <th>Посада / Звання</th>
             <th>Дисципліни</th>
             <th>Контакт</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
-            <td align="center"><img src="photos/petrenko.jpg" alt="Фото" width="60" height="70"></td>
+            <td style="text-align: center;"><img src="photos/petrenko.jpg" alt="Фото" width="60" height="70"></td>
             <td><a href="staff_profile.html?id=2">Петренко Олена Василівна</a></td>
             <td>Професор,<br>д-р техн. наук</td>
             <td>Бази даних,<br>Інформаційні системи</td>
             <td><a href="mailto:petrenko@ntu.edu.ua">petrenko@ntu.edu.ua</a></td>
           </tr>
+        </tbody>
+      </table>
+
+      <h2 id="docents">Доценти</h2>
+      <table class="data-table">
+        <thead>
           <tr>
-            <td align="center"><img src="photos/bondarenko.jpg" alt="Фото" width="60" height="70"></td>
-            <td><a href="staff_profile.html?id=3">Бондаренко Микола Сергійович</a></td>
-            <td>Професор,<br>д-р фіз.-мат. наук</td>
-            <td>Математична логіка,<br>Дискретна математика</td>
-            <td><a href="mailto:bondarenko@ntu.edu.ua">bondarenko@ntu.edu.ua</a></td>
-          </tr>
-        </table>
-
-        <br>
-        <a name="docents"></a>
-        <h2>Доценти</h2>
-
-        <table border="1" cellpadding="8" cellspacing="0" width="100%">
-          <tr bgcolor="#e8e8e8">
             <th width="80">Фото</th>
             <th>ПІБ</th>
             <th>Посада / Звання</th>
             <th>Дисципліни</th>
             <th>Контакт</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
-            <td align="center"><img src="photos/sydorenko.jpg" alt="Фото" width="60" height="70"></td>
+            <td style="text-align: center;"><img src="photos/sydorenko.jpg" alt="Фото" width="60" height="70"></td>
             <td><a href="staff_profile.html?id=4">Сидоренко Андрій Олексійович</a></td>
             <td>Доцент,<br>канд. техн. наук</td>
             <td>Веб-технології,<br>Програмна інженерія</td>
             <td><a href="mailto:sydorenko@ntu.edu.ua">sydorenko@ntu.edu.ua</a></td>
           </tr>
-          <tr>
-            <td align="center"><img src="photos/marchenko.jpg" alt="Фото" width="60" height="70"></td>
-            <td><a href="staff_profile.html?id=5">Марченко Тетяна Іванівна</a></td>
-            <td>Доцент,<br>канд. техн. наук</td>
-            <td>Комп'ютерні мережі,<br>Кібербезпека</td>
-            <td><a href="mailto:marchenko@ntu.edu.ua">marchenko@ntu.edu.ua</a></td>
-          </tr>
-          <tr>
-            <td align="center"><img src="photos/kravchenko.jpg" alt="Фото" width="60" height="70"></td>
-            <td><a href="staff_profile.html?id=6">Кравченко Дмитро Юрійович</a></td>
-            <td>Доцент,<br>канд. техн. наук</td>
-            <td>Операційні системи,<br>Системне програмування</td>
-            <td><a href="mailto:kravchenko@ntu.edu.ua">kravchenko@ntu.edu.ua</a></td>
-          </tr>
-        </table>
+        </tbody>
+      </table>
+    </main>
+  </div>
 
-        <br>
-        <a name="assistants"></a>
-        <h2>Асистенти / Старші викладачі</h2>
-
-        <table border="1" cellpadding="8" cellspacing="0" width="100%">
-          <tr bgcolor="#e8e8e8">
-            <th width="80">Фото</th>
-            <th>ПІБ</th>
-            <th>Посада</th>
-            <th>Дисципліни</th>
-            <th>Контакт</th>
-          </tr>
-          <tr>
-            <td align="center"><img src="photos/tkachenko.jpg" alt="Фото" width="60" height="70"></td>
-            <td><a href="staff_profile.html?id=7">Ткаченко Юлія Михайлівна</a></td>
-            <td>Старший викладач</td>
-            <td>Алгоритми та структури даних</td>
-            <td><a href="mailto:tkachenko@ntu.edu.ua">tkachenko@ntu.edu.ua</a></td>
-          </tr>
-          <tr>
-            <td align="center"><img src="photos/moroz.jpg" alt="Фото" width="60" height="70"></td>
-            <td><a href="staff_profile.html?id=8">Мороз Олег Вікторович</a></td>
-            <td>Асистент</td>
-            <td>Об'єктно-орієнтоване програмування</td>
-            <td><a href="mailto:moroz@ntu.edu.ua">moroz@ntu.edu.ua</a></td>
-          </tr>
-        </table>
-
-      </td>
-    </tr>
-  </table>
-
-  <!-- ПІДВАЛ -->
-  <table width="100%" border="1" cellpadding="8" cellspacing="0">
-    <tr>
-      <td align="center">
-        <p>© 2025 Кафедра інформаційних технологій та програмної інженерії. НТУ.</p>
-        <a href="index.html">Головна</a> |
-        <a href="about.html">Про кафедру</a> |
-        <a href="contacts.html">Контакти</a>
-      </td>
-    </tr>
-  </table>
+  <footer class="site-footer">
+    <p>© 2025 Кафедра інформаційних технологій та програмної інженерії. НТУ.</p>
+  </footer>
 
 </body>
 </html>

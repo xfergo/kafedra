@@ -4,176 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Новини — КІТ НТУ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ШАПКА -->
-  <table width="100%" border="1" cellpadding="8" cellspacing="0">
-    <tr>
-      <td width="80">
-        <img src="logo.png" alt="Логотип університету" width="70" height="70">
-      </td>
-      <td>
+  <header class="site-header">
+    <div class="logo-section">
+      <img src="logo.png" alt="Логотип університету" width="70" height="70">
+      <div>
         <h2>Національний технічний університет</h2>
         <h3>Кафедра інформаційних технологій та програмної інженерії</h3>
-      </td>
-      <td align="right">
-        <a href="login.html">Увійти</a> |
-        <a href="register.html">Реєстрація</a>
-      </td>
-    </tr>
-  </table>
+      </div>
+    </div>
+    <div class="auth-links">
+      <a href="login.html">Увійти</a> |
+      <a href="register.html">Реєстрація</a>
+    </div>
+  </header>
 
-  <!-- НАВІГАЦІЯ -->
-  <table width="100%" border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <td><a href="index.html">Головна</a></td>
-      <td><a href="about.html">Про кафедру</a></td>
-      <td><a href="staff.html">Склад кафедри</a></td>
-      <td><a href="programs.html">Навчальні програми</a></td>
-      <td><a href="schedule.html">Розклад</a></td>
-      <td><a href="science.html">Наука</a></td>
-      <td><a href="news.html"><b>Новини</b></a></td>
-      <td><a href="contacts.html">Контакти</a></td>
-    </tr>
-  </table>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="about.html">Про кафедру</a></li>
+      <li><a href="staff.html">Склад кафедри</a></li>
+      <li><a href="programs.html">Навчальні програми</a></li>
+      <li><a href="schedule.html">Розклад</a></li>
+      <li><a href="science.html">Наука</a></li>
+      <li><a href="news.html" class="active">Новини</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+  </nav>
 
-  <h1>&nbsp;Новини кафедри</h1>
-  <p>&nbsp;<a href="index.html">Головна</a> &raquo; Новини</p>
-  <hr>
+  <div class="container">
+    <aside class="sidebar">
+      <h4>Фільтр за роком</h4>
+      <ul>
+        <li><a href="news.html?year=2025">2025</a></li>
+        <li><a href="news.html?year=2024">2024</a></li>
+        <li><a href="news.html?year=2023">2023</a></li>
+      </ul>
 
-  <table width="100%" border="0" cellpadding="10">
-    <tr valign="top">
+      <br>
+      <h4>Категорії</h4>
+      <ul>
+        <li><a href="#">Наукові події</a></li>
+        <li><a href="#">Навчання</a></li>
+        <li><a href="#">Партнерство</a></li>
+        <li><a href="#">Конференції</a></li>
+        <li><a href="#">Студентське життя</a></li>
+      </ul>
+    </aside>
 
-      <!-- Ліва колонка — фільтр -->
-      <td width="200" bgcolor="#f0f0f0">
-        <table border="1" cellpadding="6" cellspacing="0" width="100%">
-          <tr><td bgcolor="#cccccc"><b>Фільтр за роком</b></td></tr>
-          <tr><td><a href="news.html?year=2025">2025</a></td></tr>
-          <tr><td><a href="news.html?year=2024">2024</a></td></tr>
-          <tr><td><a href="news.html?year=2023">2023</a></td></tr>
-        </table>
+    <main class="content">
+      <h1>Новини кафедри</h1>
+      <p><a href="index.html">Головна</a> &raquo; Новини</p>
+      <hr>
 
-        <br>
+      <article class="news-item" id="n1">
+        <div class="news-meta">
+          <strong>12.03.2025</strong> | <span style="color: green;">Наукові події</span>
+        </div>
+        <h3>Студенти кафедри посіли I місце на всеукраїнській олімпіаді з програмування</h3>
+        <img src="news/olympiad.jpg" alt="Олімпіада" width="300" style="float: left; margin: 0 15px 15px 0;">
+        <p>Команда студентів нашої кафедри у складі Олексія Гриценка, Марії Шевченко та Владислава Литвина здобула перше місце на XVII всеукраїнській студентській олімпіаді з програмування, яка відбулася у Харківському національному університеті радіоелектроніки.</p>
+        <p>Змагання тривали два дні та включали 15 завдань різного рівня складності. Наша команда впоралася з 13 завданнями та набрала максимальну кількість балів.</p>
+        <p><a href="news_detail.html?id=1" class="btn">Читати повністю &gt;&gt;</a></p>
+        <div style="clear: both;"></div>
+      </article>
 
-        <table border="1" cellpadding="6" cellspacing="0" width="100%">
-          <tr><td bgcolor="#cccccc"><b>Категорії</b></td></tr>
-          <tr><td><a href="#">Наукові події</a></td></tr>
-          <tr><td><a href="#">Навчання</a></td></tr>
-          <tr><td><a href="#">Партнерство</a></td></tr>
-          <tr><td><a href="#">Конференції</a></td></tr>
-          <tr><td><a href="#">Студентське життя</a></td></tr>
-        </table>
-      </td>
+      <article class="news-item" id="n2">
+        <div class="news-meta">
+          <strong>05.03.2025</strong> | <span style="color: blue;">Партнерство</span>
+        </div>
+        <h3>Відкрита лекція від представника компанії GlobalLogic</h3>
+        <p>4 березня 2025 року в ауд. 301 відбулася відкрита лекція Senior Software Engineer компанії GlobalLogic Андрія Власенка на тему «Мікросервісна архітектура у великих enterprise-проєктах».</p>
+        <p><a href="news_detail.html?id=2" class="btn">Читати повністю &gt;&gt;</a></p>
+      </article>
 
-      <!-- Центральна колонка -->
-      <td>
+    </main>
+  </div>
 
-        <!-- Новина 1 -->
-        <a name="n1"></a>
-        <table border="1" cellpadding="8" cellspacing="0" width="100%">
-          <tr bgcolor="#e8e8e8">
-            <td>
-              <b>12.03.2025</b> &nbsp;&nbsp;
-              <font color="green">[Наукові події]</font>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h3>Студенти кафедри посіли I місце на всеукраїнській олімпіаді з програмування</h3>
-              <img src="news/olympiad.jpg" alt="Олімпіада" width="300" height="180">
-              <p>
-                Команда студентів нашої кафедри у складі Олексія Гриценка, Марії Шевченко та
-                Владислава Литвина здобула перше місце на XVII всеукраїнській студентській
-                олімпіаді з програмування, яка відбулася у Харківському національному
-                університеті радіоелектроніки.
-              </p>
-              <p>
-                Змагання тривали два дні та включали 15 завдань різного рівня складності.
-                Наша команда впоралася з 13 завданнями та набрала максимальну кількість балів.
-              </p>
-              <p><a href="news_detail.html?id=1">Читати повністю &gt;&gt;</a></p>
-            </td>
-          </tr>
-        </table>
-
-        <br>
-
-        <!-- Новина 2 -->
-        <a name="n2"></a>
-        <table border="1" cellpadding="8" cellspacing="0" width="100%">
-          <tr bgcolor="#e8e8e8">
-            <td>
-              <b>05.03.2025</b> &nbsp;&nbsp;
-              <font color="blue">[Партнерство]</font>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h3>Відкрита лекція від представника компанії GlobalLogic</h3>
-              <img src="news/lecture.jpg" alt="Лекція" width="300" height="180">
-              <p>
-                4 березня 2025 року в ауд. 301 відбулася відкрита лекція Senior Software
-                Engineer компанії GlobalLogic Андрія Власенка на тему «Мікросервісна
-                архітектура у великих enterprise-проєктах».
-              </p>
-              <p><a href="news_detail.html?id=2">Читати повністю &gt;&gt;</a></p>
-            </td>
-          </tr>
-        </table>
-
-        <br>
-
-        <!-- Новина 3 -->
-        <a name="n3"></a>
-        <table border="1" cellpadding="8" cellspacing="0" width="100%">
-          <tr bgcolor="#e8e8e8">
-            <td>
-              <b>28.02.2025</b> &nbsp;&nbsp;
-              <font color="blue">[Партнерство]</font>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h3>Підписано договір про співпрацю з IT-компанією SoftServe</h3>
-              <p>
-                28 лютого 2025 року між нашою кафедрою та компанією SoftServe підписано
-                договір про стратегічне партнерство. Угода передбачає проведення спільних
-                хакатонів, стажування студентів та участь фахівців компанії у навчальному процесі.
-              </p>
-              <p><a href="news_detail.html?id=3">Читати повністю &gt;&gt;</a></p>
-            </td>
-          </tr>
-        </table>
-
-        <br>
-
-        <!-- Пагінація -->
-        <table border="0" cellpadding="6">
-          <tr>
-            <td><b>Сторінки:</b></td>
-            <td><b>1</b></td>
-            <td><a href="news.html?page=2">2</a></td>
-            <td><a href="news.html?page=3">3</a></td>
-            <td><a href="news.html?page=2">Наступна &gt;</a></td>
-          </tr>
-        </table>
-
-      </td>
-    </tr>
-  </table>
-
-  <!-- ПІДВАЛ -->
-  <table width="100%" border="1" cellpadding="8" cellspacing="0">
-    <tr>
-      <td align="center">
-        <p>© 2025 Кафедра інформаційних технологій та програмної інженерії. НТУ.</p>
-        <a href="index.html">Головна</a> |
-        <a href="about.html">Про кафедру</a> |
-        <a href="contacts.html">Контакти</a>
-      </td>
-    </tr>
-  </table>
+  <footer class="site-footer">
+    <p>© 2025 Кафедра інформаційних технологій та програмної інженерії. НТУ.</p>
+  </footer>
 
 </body>
 </html>

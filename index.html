@@ -4,91 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кафедра інформаційних технологій — НТУ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== ШАПКА ===== -->
-  <table width="100%" border="1" cellpadding="8" cellspacing="0">
-    <tr>
-      <td width="80">
-        <img src="logo.png" alt="Логотип університету" width="70" height="70">
-      </td>
-      <td>
+  <header class="site-header">
+    <div class="logo-section">
+      <img src="logo.png" alt="Логотип університету" width="70" height="70">
+      <div>
         <h2>Національний технічний університет</h2>
         <h3>Кафедра інформаційних технологій та програмної інженерії</h3>
-      </td>
-      <td align="right">
-        <a href="login.html">Увійти</a> |
-        <a href="register.html">Реєстрація</a>
-      </td>
-    </tr>
-  </table>
+      </div>
+    </div>
+    <div class="auth-links">
+      <a href="login.html">Увійти</a> |
+      <a href="register.html">Реєстрація</a>
+    </div>
+  </header>
 
-  <!-- ===== НАВІГАЦІЯ ===== -->
-  <table width="100%" border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <td><a href="index.html"><b>Головна</b></a></td>
-      <td><a href="about.html">Про кафедру</a></td>
-      <td><a href="staff.html">Склад кафедри</a></td>
-      <td><a href="programs.html">Навчальні програми</a></td>
-      <td><a href="schedule.html">Розклад</a></td>
-      <td><a href="science.html">Наука</a></td>
-      <td><a href="news.html">Новини</a></td>
-      <td><a href="contacts.html">Контакти</a></td>
-    </tr>
-  </table>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html" class="active">Головна</a></li>
+      <li><a href="about.html">Про кафедру</a></li>
+      <li><a href="staff.html">Склад кафедри</a></li>
+      <li><a href="programs.html">Навчальні програми</a></li>
+      <li><a href="schedule.html">Розклад</a></li>
+      <li><a href="science.html">Наука</a></li>
+      <li><a href="news.html">Новини</a></li>
+      <li><a href="contacts.html">Контакти</a></li>
+    </ul>
+  </nav>
 
-  <!-- ===== ОСНОВНИЙ КОНТЕНТ ===== -->
-  <table width="100%" border="0" cellpadding="10" cellspacing="0">
-    <tr valign="top">
+  <div class="container">
+    
+    <aside class="sidebar">
+      <h4>Швидкі посилання</h4>
+      <ul>
+        <li><a href="programs.html">Бакалаврат</a></li>
+        <li><a href="programs.html#master">Магістратура</a></li>
+        <li><a href="schedule.html">Розклад занять</a></li>
+        <li><a href="materials.html">Навчальні матеріали</a></li>
+        <li><a href="science.html">Публікації</a></li>
+        <li><a href="contacts.html">Зворотній зв'язок</a></li>
+      </ul>
 
-      <!-- Ліва колонка — навігаційне меню -->
-      <td width="200" bgcolor="#f0f0f0">
-        <table border="1" cellpadding="6" cellspacing="0" width="100%">
-          <tr><td bgcolor="#cccccc"><b>Швидкі посилання</b></td></tr>
-          <tr><td><a href="programs.html">Бакалаврат</a></td></tr>
-          <tr><td><a href="programs.html#master">Магістратура</a></td></tr>
-          <tr><td><a href="schedule.html">Розклад занять</a></td></tr>
-          <tr><td><a href="materials.html">Навчальні матеріали</a></td></tr>
-          <tr><td><a href="science.html">Публікації</a></td></tr>
-          <tr><td><a href="contacts.html">Зворотній зв'язок</a></td></tr>
-        </table>
+      <br>
+      <h4>Оголошення</h4>
+      <ul>
+        <li><b>15.03.2025</b><br>Зустріч з роботодавцями у ауд. 301</li>
+        <li><b>20.03.2025</b><br>Захист курсових робіт — ауд. 205</li>
+      </ul>
+    </aside>
 
-        <br>
+    <main class="content">
+      <h2>Ласкаво просимо на сайт кафедри!</h2>
+      <p>
+        Кафедра інформаційних технологій та програмної інженерії — один із провідних
+        навчально-наукових підрозділів університету. Кафедра готує фахівців у галузі
+        комп'ютерних наук, програмної інженерії та інформаційних систем.
+      </p>
 
-        <table border="1" cellpadding="6" cellspacing="0" width="100%">
-          <tr><td bgcolor="#cccccc"><b>Оголошення</b></td></tr>
-          <tr><td>
-            <p><b>15.03.2025</b><br>
-            Зустріч з роботодавцями у ауд. 301</p>
-          </td></tr>
-          <tr><td>
-            <p><b>20.03.2025</b><br>
-            Захист курсових робіт — ауд. 205</p>
-          </td></tr>
-        </table>
-      </td>
+      <hr>
 
-      <!-- Центральна колонка — основний вміст -->
-      <td>
-        <h2>Ласкаво просимо на сайт кафедри!</h2>
-
-        <p>
-          Кафедра інформаційних технологій та програмної інженерії — один із провідних
-          навчально-наукових підрозділів університету. Кафедра готує фахівців у галузі
-          комп'ютерних наук, програмної інженерії та інформаційних систем.
-        </p>
-
-        <hr>
-
-        <h3>Останні новини</h3>
-
-        <table border="1" cellpadding="8" cellspacing="0" width="100%">
-          <tr bgcolor="#e8e8e8">
+      <h3>Останні новини</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
             <th width="120">Дата</th>
             <th>Заголовок</th>
-            <th width="100">Детальніше</th>
+            <th width="120">Детальніше</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>12.03.2025</td>
             <td>Студенти кафедри посіли I місце на всеукраїнській олімпіаді з програмування</td>
@@ -99,79 +86,47 @@
             <td>Відкрита лекція від представника компанії GlobalLogic</td>
             <td><a href="news.html#n2">Читати →</a></td>
           </tr>
-          <tr>
-            <td>28.02.2025</td>
-            <td>Підписано договір про співпрацю з IT-компанією SoftServe</td>
-            <td><a href="news.html#n3">Читати →</a></td>
-          </tr>
-        </table>
+        </tbody>
+      </table>
+      <p><a href="news.html">Всі новини &gt;&gt;</a></p>
 
-        <p><a href="news.html">Всі новини &gt;&gt;</a></p>
+      <hr>
 
-        <hr>
+      <h3>Навчальні програми</h3>
+      <ul>
+        <li><a href="programs.html#bachelor">Бакалавр — Комп'ютерні науки (4 роки)</a></li>
+        <li><a href="programs.html#bachelor2">Бакалавр — Програмна інженерія (4 роки)</a></li>
+        <li><a href="programs.html#master">Магістр — Інформаційні системи та технології (1,5 роки)</a></li>
+      </ul>
+    </main>
 
-        <h3>Навчальні програми</h3>
+    <aside class="sidebar">
+      <h4>Партнери</h4>
+      <ul>
+        <li><a href="#">SoftServe</a></li>
+        <li><a href="#">GlobalLogic</a></li>
+        <li><a href="#">EPAM Systems</a></li>
+        <li><a href="#">Luxoft</a></li>
+      </ul>
 
-        <ul>
-          <li><a href="programs.html#bachelor">Бакалавр — Комп'ютерні науки (4 роки)</a></li>
-          <li><a href="programs.html#bachelor2">Бакалавр — Програмна інженерія (4 роки)</a></li>
-          <li><a href="programs.html#master">Магістр — Інформаційні системи та технології (1,5 роки)</a></li>
-          <li><a href="programs.html#phd">Аспірантура — Комп'ютерні науки (4 роки)</a></li>
-        </ul>
+      <br>
+      <h4>Контакти</h4>
+      <p>Корпус А, кім. 215<br>
+      Тел.: +38 (044) 123-45-67<br>
+      <a href="mailto:kafedra@ntu.edu.ua">kafedra@ntu.edu.ua</a></p>
+    </aside>
 
-        <hr>
+  </div>
 
-        <h3>Наша статистика</h3>
-
-        <table border="1" cellpadding="8" cellspacing="0">
-          <tr>
-            <td align="center"><b>Викладачів</b><br>32</td>
-            <td align="center"><b>Студентів</b><br>450</td>
-            <td align="center"><b>Докторів наук</b><br>8</td>
-            <td align="center"><b>Кандидатів наук</b><br>18</td>
-            <td align="center"><b>Років роботи</b><br>25</td>
-          </tr>
-        </table>
-      </td>
-
-      <!-- Права колонка -->
-      <td width="180" bgcolor="#f0f0f0">
-        <table border="1" cellpadding="6" cellspacing="0" width="100%">
-          <tr><td bgcolor="#cccccc"><b>Партнери</b></td></tr>
-          <tr><td><a href="#">SoftServe</a></td></tr>
-          <tr><td><a href="#">GlobalLogic</a></td></tr>
-          <tr><td><a href="#">EPAM Systems</a></td></tr>
-          <tr><td><a href="#">Luxoft</a></td></tr>
-        </table>
-
-        <br>
-
-        <table border="1" cellpadding="6" cellspacing="0" width="100%">
-          <tr><td bgcolor="#cccccc"><b>Контакти</b></td></tr>
-          <tr><td>
-            <p>Корпус А, кім. 215<br>
-            Тел.: +38 (044) 123-45-67<br>
-            <a href="mailto:kafedra@ntu.edu.ua">kafedra@ntu.edu.ua</a></p>
-          </td></tr>
-        </table>
-      </td>
-
-    </tr>
-  </table>
-
-  <!-- ===== ПІДВАЛ ===== -->
-  <table width="100%" border="1" cellpadding="8" cellspacing="0">
-    <tr>
-      <td align="center">
-        <p>© 2025 Кафедра інформаційних технологій та програмної інженерії.
-        Національний технічний університет.</p>
-        <a href="index.html">Головна</a> |
-        <a href="about.html">Про кафедру</a> |
-        <a href="contacts.html">Контакти</a> |
-        <a href="sitemap.html">Карта сайту</a>
-      </td>
-    </tr>
-  </table>
+  <footer class="site-footer">
+    <p>© 2025 Кафедра інформаційних технологій та програмної інженерії. Національний технічний університет.</p>
+    <div>
+      <a href="index.html">Головна</a> |
+      <a href="about.html">Про кафедру</a> |
+      <a href="contacts.html">Контакти</a> |
+      <a href="sitemap.html">Карта сайту</a>
+    </div>
+  </footer>
 
 </body>
 </html>

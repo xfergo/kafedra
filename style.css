@@ -1,0 +1,193 @@
+/* Базові налаштування (Reset) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Шапка сайту (Header) */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    color: white;
+    padding: 15px 30px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-section h2, .logo-section h3 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.logo-section h2 { font-size: 1.2rem; }
+.logo-section h3 { font-size: 1rem; color: #cccccc; }
+
+.auth-links a {
+    color: #ffd700; /* жовтий колір для посилань авторизації */
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+/* Головна навігація (Nav) */
+.main-nav {
+    background-color: #eeeeee;
+    padding: 10px 30px;
+    border-bottom: 2px solid #cccccc;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    font-weight: bold;
+    color: #333333;
+}
+
+.main-nav a.active {
+    color: #d9534f;
+}
+
+/* Основний макет (Layout) */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+/* Бічні панелі (Sidebars) */
+.sidebar {
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.sidebar h4 {
+    background-color: #cccccc;
+    margin: -15px -15px 15px -15px;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+
+.content {
+    flex: 1;
+    padding: 0 15px;
+}
+
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #e8e8e8;
+}
+
+
+.site-footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.site-footer a {
+    color: #add8e6;
+    margin: 0 10px;
+}
+
+
+.two-columns { display: flex; gap: 30px; flex-wrap: wrap; margin-top: 20px; }
+.two-columns > div { flex: 1; min-width: 300px; }
+
+
+.news-item { border: 1px solid #cccccc; padding: 20px; margin-bottom: 20px; border-radius: 5px; }
+.news-item h3 { margin-top: 0; color: #0056b3; }
+.news-meta { font-size: 0.9em; color: #555; background: #e8e8e8; padding: 5px 10px; margin-bottom: 15px; display: inline-block; border-radius: 3px; }
+
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+.form-group input[type="text"], 
+.form-group input[type="password"], 
+.form-group select, 
+.form-group textarea { width: 100%; padding: 8px; border: 1px solid #cccccc; border-radius: 4px; font-family: inherit; }
+.btn { background-color: #333333; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px; font-weight: bold; }
+.btn:hover { background-color: #555555; }
+
+
+.admin-header { background-color: #1a1a1a; }
+.admin-header .logo-section h2 { color: #ffffff; }
+.admin-header a { color: #ffd700; margin-left: 10px; }
+
+.quick-actions { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 30px; }
+.quick-action-card { 
+    flex: 1; 
+    min-width: 200px; 
+    background-color: #e8f4f8; 
+    padding: 20px; 
+    border-radius: 5px; 
+    text-align: center; 
+    border: 1px solid #bce8f1;
+}
+.quick-action-card a { font-weight: bold; font-size: 1.1em; color: #0056b3; display: block; }
+.quick-action-card a:hover { text-decoration: none; color: #d9534f; }
+
+.status-active { color: green; font-weight: bold; }
+.status-draft { color: orange; font-weight: bold; }
+.status-alert { color: red; font-weight: bold; }
