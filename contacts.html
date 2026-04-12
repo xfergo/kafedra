@@ -13,98 +13,58 @@
       <img src="logo.png" alt="Логотип університету" width="70" height="70">
       <div>
         <h2>Національний технічний університет</h2>
-        <h3>Кафедра інформаційних технологій та програмної інженерії</h3>
+        <h3>Кафедра інформаційних технологій</h3>
       </div>
     </div>
     <div class="auth-links">
-      <a href="login.html">Увійти</a> |
-      <a href="register.html">Реєстрація</a>
+      <a href="login.html">Увійти</a> | <a href="register.html">Реєстрація</a>
     </div>
   </header>
 
   <nav class="main-nav">
     <ul>
       <li><a href="index.html">Головна</a></li>
-      <li><a href="about.html">Про кафедру</a></li>
       <li><a href="staff.html">Склад кафедри</a></li>
-      <li><a href="programs.html">Навчальні програми</a></li>
-      <li><a href="schedule.html">Розклад</a></li>
-      <li><a href="science.html">Наука</a></li>
       <li><a href="news.html">Новини</a></li>
       <li><a href="contacts.html" class="active">Контакти</a></li>
     </ul>
   </nav>
 
-  <div class="container" style="display: block;"> <h1>Контакти</h1>
-    <p><a href="index.html">Головна</a> &raquo; Контакти</p>
-    <hr>
-
+  <div class="container" style="display: block;">
+    <h1>Контакти</h1><hr>
     <div class="two-columns">
       <div>
         <h2>Реквізити кафедри</h2>
         <table class="data-table">
-          <tr>
-            <th>Адреса</th>
-            <td>вул. Університетська, 14, м. Київ, 03056, Корпус А, кімната 215</td>
-          </tr>
-          <tr>
-            <th>Телефон</th>
-            <td>+38 (044) 123-45-67</td>
-          </tr>
-          <tr>
-            <th>E-mail</th>
-            <td><a href="mailto:kafedra@ntu.edu.ua">kafedra@ntu.edu.ua</a></td>
-          </tr>
+          <tr><th>Адреса</th><td>вул. Університетська, 14, Корпус А, кімната 215</td></tr>
+          <tr><th>Телефон</th><td>+38 (044) 123-45-67</td></tr>
+          <tr><th>E-mail</th><td><a href="mailto:kafedra@ntu.edu.ua" data-tooltip="Натисніть, щоб відкрити поштовий клієнт">kafedra@ntu.edu.ua</a></td></tr>
         </table>
-        
-        <h3>Як нас знайти</h3>
-        <p>Станція метро "Університет" (червона лінія), далі 5 хвилин пішки вулицею Університетською.</p>
       </div>
-
       <div>
         <h2>Форма зворотного зв'язку</h2>
-        <form action="send_message.php" method="post" style="background: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
-          
-          <div class="form-group">
-            <label>Ваше ім'я *</label>
-            <input type="text" name="name" required>
-          </div>
-
-          <div class="form-group">
-            <label>E-mail *</label>
-            <input type="text" name="email" required>
-          </div>
-
+        <form style="background: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+          <div class="form-group"><label>Ваше ім'я *</label><input type="text" required></div>
+          <div class="form-group"><label>E-mail *</label><input type="text" required></div>
           <div class="form-group">
             <label>Тема *</label>
-            <select name="topic" required>
+            <select required>
               <option value="">-- Оберіть тему --</option>
-              <option value="study">Навчання та вступ</option>
-              <option value="science">Наукова співпраця</option>
-              <option value="partnership">Партнерство</option>
+              <option value="study">Навчання</option>
+              <option value="other">Інше</option>
             </select>
           </div>
-
-          <div class="form-group">
-            <label>Повідомлення *</label>
-            <textarea name="message" rows="5" required></textarea>
-          </div>
-
-          <div class="form-group">
-            <label>
-              <input type="checkbox" name="agree" value="1" required> Я погоджуюся з політикою конфіденційності
-            </label>
-          </div>
-
-          <button type="submit" class="btn">Надіслати повідомлення</button>
+          <div class="form-group"><label>Повідомлення *</label><textarea rows="5" required></textarea></div>
+          <button type="submit" class="btn" data-tooltip="Надіслати повідомлення адміністратору">Надіслати</button>
         </form>
       </div>
     </div>
   </div>
 
   <footer class="site-footer">
-    <p>© 2025 Кафедра інформаційних технологій та програмної інженерії. НТУ.</p>
+    <p>© 2025 Кафедра інформаційних технологій. НТУ.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

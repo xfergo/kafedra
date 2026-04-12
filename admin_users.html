@@ -2,174 +2,48 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Управління користувачами — Адмінпанель КІТ НТУ</title>
+  <title>Управління користувачами — Адмінка</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header class="site-header admin-header">
-    <div class="logo-section">
-      <h2>АДМІНІСТРАТИВНА ПАНЕЛЬ — КІТ НТУ</h2>
-    </div>
-    <div class="auth-links">
-      <a href="index.html">Переглянути сайт</a> |
-      <a href="logout.php">Вийти</a>
-    </div>
+    <div class="logo-section"><h2>АДМІНІСТРАТИВНА ПАНЕЛЬ</h2></div>
+    <div class="auth-links"><a href="index.html">Сайт</a> | <a href="logout.php">Вийти</a></div>
   </header>
 
   <div class="container">
-
     <aside class="sidebar">
-      <h4>Управління контентом</h4>
+      <h4>Меню</h4>
       <ul>
-        <li><a href="admin_news.html">📰 Новини</a></li>
-        <li><a href="admin_pages.html">📄 Сторінки сайту</a></li>
-        <li><a href="admin_staff.html">👥 Склад кафедри</a></li>
-        <li><a href="admin_programs.html">🎓 Навчальні програми</a></li>
-        <li><a href="admin_materials.html">📁 Матеріали</a></li>
-      </ul>
-
-      <br>
-      <h4>Користувачі</h4>
-      <ul>
-        <li><a href="admin_users.html" style="font-weight: bold; color: #d9534f;">👤 Список користувачів</a></li>
-        <li><a href="admin_roles.html">🔑 Ролі та права</a></li>
-        <li><a href="admin_comments.html">💬 Коментарі</a></li>
-      </ul>
-
-      <br>
-      <h4>Система</h4>
-      <ul>
-        <li><a href="admin_stats.html">📊 Статистика</a></li>
-        <li><a href="admin_settings.html">⚙ Налаштування</a></li>
-        <li><a href="admin.html">← Головна панелі</a></li>
+        <li><a href="admin_news.html">Новини</a></li>
+        <li><a href="admin_users.html" style="color: #d9534f;">Користувачі</a></li>
       </ul>
     </aside>
 
     <main class="content">
       <h2>Управління користувачами</h2>
-      <p><a href="admin.html">Панель керування</a> &raquo; Користувачі</p>
-
-      <div style="background: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 20px;">
-        <strong style="display: block; margin-bottom: 15px;">Пошук і фільтрація</strong>
-        <form action="admin_users.html" method="get" style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-end;">
-          
-          <div class="form-group" style="margin-bottom: 0; flex: 1; min-width: 200px;">
-            <label>Ім'я або e-mail:</label>
-            <input type="text" name="search" placeholder="Введіть дані для пошуку">
-          </div>
-
-          <div class="form-group" style="margin-bottom: 0; flex: 1; min-width: 150px;">
-            <label>Роль:</label>
-            <select name="role">
-              <option value="">Всі</option>
-              <option value="admin">Адміністратор</option>
-              <option value="student">Студент</option>
-              <option value="teacher">Викладач</option>
-              <option value="other">Інше</option>
-            </select>
-          </div>
-
-          <div class="form-group" style="margin-bottom: 0; flex: 1; min-width: 150px;">
-            <label>Статус:</label>
-            <select name="status">
-              <option value="">Всі</option>
-              <option value="active">Активні</option>
-              <option value="blocked">Заблоковані</option>
-            </select>
-          </div>
-
-          <div style="margin-bottom: 0; display: flex; gap: 10px; align-items: center;">
-            <button type="submit" class="btn">Знайти</button>
-            <a href="admin_users.html" style="color: #6c757d; text-decoration: underline;">Скинути</a>
-          </div>
-
-        </form>
-      </div>
-
       <table class="data-table">
         <thead>
-          <tr>
-            <th width="40" style="text-align: center;">ID</th>
-            <th>ПІБ</th>
-            <th>E-mail</th>
-            <th>Роль</th>
-            <th>Дата реєстрації</th>
-            <th style="text-align: center;">Статус</th>
-            <th style="text-align: center;">Дії</th>
-          </tr>
+          <tr><th width="40">ID</th><th>ПІБ</th><th>Роль</th><th>Дії</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td style="text-align: center;">1</td>
-            <td>Коваленко Іван Петрович</td>
-            <td>kovalenko@ntu.edu.ua</td>
-            <td>Адміністратор</td>
-            <td>01.09.2022</td>
-            <td style="text-align: center;" class="status-active">Активний</td>
-            <td style="text-align: center;">
-              <a href="admin_user_edit.html?id=1">Редагувати</a>
-            </td>
+            <td>1</td><td>Коваленко Іван Петрович</td><td>Адмін</td>
+            <td><a href="#" data-tooltip="Редагувати профіль">Редагувати</a></td>
           </tr>
           <tr>
-            <td style="text-align: center;">2</td>
-            <td>Сидоренко Андрій Олексійович</td>
-            <td>sydorenko@ntu.edu.ua</td>
-            <td>Викладач</td>
-            <td>01.09.2022</td>
-            <td style="text-align: center;" class="status-active">Активний</td>
-            <td style="text-align: center;">
-              <a href="admin_user_edit.html?id=2">Редагувати</a> |
-              <a href="admin_user_block.php?id=2" onclick="return confirm('Заблокувати?')" style="color: #d9534f;">Блокувати</a>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">15</td>
-            <td>Гриценко Олексій Вікторович</td>
-            <td>grytsenko@student.ntu.edu.ua</td>
-            <td>Студент</td>
-            <td>02.09.2023</td>
-            <td style="text-align: center;" class="status-active">Активний</td>
-            <td style="text-align: center;">
-              <a href="admin_user_edit.html?id=15">Редагувати</a> |
-              <a href="admin_user_block.php?id=15" onclick="return confirm('Заблокувати?')" style="color: #d9534f;">Блокувати</a>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">87</td>
-            <td>Лисенко Богдан Тарасович</td>
-            <td>lysenko@student.ntu.edu.ua</td>
-            <td>Студент</td>
-            <td>01.09.2024</td>
-            <td style="text-align: center;" class="status-alert">Заблокований</td>
-            <td style="text-align: center;">
-              <a href="admin_user_edit.html?id=87">Редагувати</a> |
-              <a href="admin_user_unblock.php?id=87" onclick="return confirm('Розблокувати?')" style="color: #28a745;">Розблокувати</a> |
-              <a href="admin_user_delete.php?id=87" onclick="return confirm('Видалити?')" style="color: #d9534f;">Видалити</a>
+            <td>2</td><td>Лисенко Богдан Тарасович</td><td>Студент</td>
+            <td>
+              <a href="#" data-tooltip="Редагувати">Редагувати</a> |
+              <a href="#" onclick="return confirm('Ви впевнені, що хочете видалити цього користувача?')" style="color: #d9534f;" data-tooltip="Безповоротне видалення!">Видалити</a>
             </td>
           </tr>
         </tbody>
       </table>
-
-      <p style="margin-top: 15px;">Всього користувачів: <b>289</b> | Активних: <b>282</b> | Заблокованих: <b>7</b></p>
-
-      <div style="margin-top: 20px;">
-        <strong>Сторінки:</strong> 
-        <span style="padding: 5px 10px; background: #0056b3; color: white; border-radius: 3px;">1</span>
-        <a href="admin_users.html?page=2" style="padding: 5px 10px; border: 1px solid #ddd; border-radius: 3px;">2</a>
-        <a href="admin_users.html?page=3" style="padding: 5px 10px; border: 1px solid #ddd; border-radius: 3px;">3</a>
-        <span style="padding: 5px 10px;">...</span>
-        <a href="admin_users.html?page=15" style="padding: 5px 10px; border: 1px solid #ddd; border-radius: 3px;">15</a>
-      </div>
-
     </main>
-
   </div>
+  <footer class="site-footer admin-header"><p>Адмінпанель © 2025</p></footer>
 
-  <footer class="site-footer admin-header">
-    <p style="margin: 0;">Адміністративна панель © 2025 — КІТ НТУ</p>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>

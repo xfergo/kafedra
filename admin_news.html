@@ -2,178 +2,41 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Управління новинами — Адмінпанель КІТ НТУ</title>
+  <title>Новини — Адмінка</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header class="site-header admin-header">
-    <div class="logo-section">
-      <h2>АДМІНІСТРАТИВНА ПАНЕЛЬ — КІТ НТУ</h2>
-    </div>
-    <div class="auth-links">
-      <a href="index.html">Переглянути сайт</a> |
-      <a href="logout.php">Вийти</a>
-    </div>
+    <div class="logo-section"><h2>АДМІНІСТРАТИВНА ПАНЕЛЬ</h2></div>
   </header>
 
   <div class="container">
-
     <aside class="sidebar">
-      <h4>Управління контентом</h4>
-      <ul>
-        <li><a href="admin_news.html" style="font-weight: bold; color: #d9534f;">📰 Новини</a></li>
-        <li><a href="admin_pages.html">📄 Сторінки сайту</a></li>
-        <li><a href="admin_staff.html">👥 Склад кафедри</a></li>
-        <li><a href="admin_programs.html">🎓 Навчальні програми</a></li>
-        <li><a href="admin_materials.html">📁 Матеріали</a></li>
-        <li><a href="admin_publications.html">📚 Публікації</a></li>
-      </ul>
-
-      <br>
-      <h4>Користувачі</h4>
-      <ul>
-        <li><a href="admin_users.html">👤 Список користувачів</a></li>
-        <li><a href="admin_comments.html">💬 Коментарі</a></li>
-      </ul>
-
-      <br>
-      <h4>Система</h4>
-      <ul>
-        <li><a href="admin_stats.html">📊 Статистика</a></li>
-        <li><a href="admin_settings.html">⚙ Налаштування</a></li>
-        <li><a href="admin.html">← Головна панелі</a></li>
-      </ul>
+      <ul><li><a href="admin_news.html" style="color: #d9534f;">Новини</a></li><li><a href="admin_users.html">Користувачі</a></li></ul>
     </aside>
-
     <main class="content">
       <h2>Управління новинами</h2>
-      <p><a href="admin.html">Панель керування</a> &raquo; Новини</p>
-
-      <div style="background: #f9f9f9; padding: 25px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 30px;">
-        <h3 style="margin-top: 0;">Додати нову новину</h3>
-        <form action="admin_news_save.php" method="post" enctype="multipart/form-data">
-          
-          <div class="form-group">
-            <label>Заголовок *</label>
-            <input type="text" name="title" required maxlength="255">
-          </div>
-
-          <div class="form-group">
-            <label>Категорія *</label>
-            <select name="category" required>
-              <option value="">-- Оберіть --</option>
-              <option value="science">Наукові події</option>
-              <option value="study">Навчання</option>
-              <option value="partnership">Партнерство</option>
-              <option value="conference">Конференції</option>
-              <option value="student">Студентське життя</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Короткий опис *</label>
-            <textarea name="excerpt" rows="3" required></textarea>
-          </div>
-
-          <div class="form-group">
-            <label>Повний текст *</label>
-            <textarea name="content" rows="8" required></textarea>
-          </div>
-
-          <div class="two-columns" style="margin-top: 0;">
-            <div class="form-group">
-              <label>Фото новини</label>
-              <input type="file" name="photo" accept="image/*" style="border: none; padding: 0;">
-            </div>
-            
-            <div class="form-group">
-              <label>Дата публікації *</label>
-              <input type="text" name="date" value="23.03.2025" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>Статус</label>
-            <label style="display: inline-block; font-weight: normal; margin-right: 15px;">
-              <input type="radio" name="status" value="published" checked> Опубліковано
-            </label>
-            <label style="display: inline-block; font-weight: normal;">
-              <input type="radio" name="status" value="draft"> Чернетка
-            </label>
-          </div>
-
-          <div style="margin-top: 20px;">
-            <button type="submit" class="btn">Зберегти новину</button>
-            <button type="reset" class="btn" style="background-color: #6c757d;">Очистити форму</button>
-          </div>
+      <div style="background: #f9f9f9; padding: 25px; border: 1px solid #ddd; margin-bottom: 30px;">
+        <form>
+          <div class="form-group"><label>Заголовок *</label><input type="text" required></div>
+          <div class="form-group"><label>Текст *</label><textarea rows="4" required></textarea></div>
+          <button type="submit" class="btn" data-tooltip="Зберегти та опублікувати на сайті">Зберегти новину</button>
         </form>
       </div>
 
-      <h3>Опубліковані новини</h3>
       <table class="data-table">
-        <thead>
-          <tr>
-            <th width="40" style="text-align: center;">ID</th>
-            <th width="100">Дата</th>
-            <th>Заголовок</th>
-            <th width="140">Категорія</th>
-            <th width="100">Статус</th>
-            <th width="130" style="text-align: center;">Дії</th>
-          </tr>
-        </thead>
+        <thead><tr><th>Заголовок</th><th>Дії</th></tr></thead>
         <tbody>
           <tr>
-            <td style="text-align: center;">47</td>
-            <td>12.03.2025</td>
-            <td><a href="news_detail.html?id=1">Студенти кафедри посіли I місце на олімпіаді</a></td>
-            <td>Наукові події</td>
-            <td class="status-active">Опубліковано</td>
-            <td style="text-align: center;">
-              <a href="admin_news_edit.html?id=47">Редагувати</a> |
-              <a href="admin_news_delete.php?id=47" onclick="return confirm('Видалити?')" style="color: #d9534f;">Видалити</a>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">46</td>
-            <td>05.03.2025</td>
-            <td><a href="news_detail.html?id=2">Відкрита лекція від GlobalLogic</a></td>
-            <td>Партнерство</td>
-            <td class="status-active">Опубліковано</td>
-            <td style="text-align: center;">
-              <a href="admin_news_edit.html?id=46">Редагувати</a> |
-              <a href="admin_news_delete.php?id=46" onclick="return confirm('Видалити?')" style="color: #d9534f;">Видалити</a>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">45</td>
-            <td>28.02.2025</td>
-            <td><a href="news_detail.html?id=3">Договір про співпрацю з SoftServe</a></td>
-            <td>Партнерство</td>
-            <td class="status-draft">Чернетка</td>
-            <td style="text-align: center;">
-              <a href="admin_news_edit.html?id=45">Редагувати</a> |
-              <a href="admin_news_delete.php?id=45" onclick="return confirm('Видалити?')" style="color: #d9534f;">Видалити</a>
-            </td>
+            <td>Відкрита лекція GlobalLogic</td>
+            <td><a href="#" onclick="return confirm('Видалити новину?')" style="color: #d9534f;" data-tooltip="Видалити назавжди">Видалити</a></td>
           </tr>
         </tbody>
       </table>
-
-      <div style="margin-top: 20px;">
-        <strong>Сторінки:</strong> 
-        <span style="padding: 5px 10px; background: #0056b3; color: white; border-radius: 3px;">1</span>
-        <a href="admin_news.html?page=2" style="padding: 5px 10px; border: 1px solid #ddd; border-radius: 3px;">2</a>
-        <a href="admin_news.html?page=3" style="padding: 5px 10px; border: 1px solid #ddd; border-radius: 3px;">3</a>
-      </div>
-
     </main>
-
   </div>
+  <footer class="site-footer admin-header"><p>Адмінпанель © 2025</p></footer>
 
-  <footer class="site-footer admin-header">
-    <p style="margin: 0;">Адміністративна панель © 2025 — КІТ НТУ</p>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>

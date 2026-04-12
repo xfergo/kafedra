@@ -14,8 +14,8 @@
     </div>
     <div class="auth-links">
       <span style="color: white; margin-right: 15px;">Адміністратор: <b>admin@ntu.edu.ua</b></span>
-      <a href="index.html">Переглянути сайт</a> |
-      <a href="logout.php">Вийти</a>
+      <a href="index.html" data-tooltip="Повернутися на публічну версію сайту">Переглянути сайт</a> |
+      <a href="logout.php" data-tooltip="Завершити поточний сеанс">Вийти</a>
     </div>
   </header>
 
@@ -24,31 +24,31 @@
     <aside class="sidebar">
       <h4>Управління контентом</h4>
       <ul>
-        <li><a href="admin_news.html"> Новини</a></li>
-        <li><a href="admin_pages.html"> Сторінки сайту</a></li>
-        <li><a href="admin_staff.html"> Склад кафедри</a></li>
-        <li><a href="admin_programs.html"> Навчальні програми</a></li>
-        <li><a href="admin_materials.html"> Матеріали</a></li>
-        <li><a href="admin_publications.html"> Публікації</a></li>
-        <li><a href="admin_schedule.html"> Розклад</a></li>
+        <li><a href="admin_news.html">Новини</a></li>
+        <li><a href="admin_pages.html">Сторінки сайту</a></li>
+        <li><a href="admin_staff.html">Склад кафедри</a></li>
+        <li><a href="admin_programs.html">Навчальні програми</a></li>
+        <li><a href="admin_materials.html">Матеріали</a></li>
+        <li><a href="admin_publications.html">Публікації</a></li>
+        <li><a href="admin_schedule.html">Розклад</a></li>
       </ul>
 
       <br>
       <h4>Користувачі</h4>
       <ul>
-        <li><a href="admin_users.html"> Список користувачів</a></li>
-        <li><a href="admin_roles.html"> Ролі та права</a></li>
-        <li><a href="admin_comments.html"> Коментарі</a></li>
-        <li><a href="admin_messages.html"> Повідомлення</a></li>
+        <li><a href="admin_users.html">Список користувачів</a></li>
+        <li><a href="admin_roles.html">Ролі та права</a></li>
+        <li><a href="admin_comments.html">Коментарі</a></li>
+        <li><a href="admin_messages.html">Повідомлення</a></li>
       </ul>
 
       <br>
       <h4>Система</h4>
       <ul>
-        <li><a href="admin_stats.html"> Статистика</a></li>
-        <li><a href="admin_settings.html"> Налаштування</a></li>
-        <li><a href="admin_backup.html"> Резервна копія</a></li>
-        <li><a href="admin_logs.html"> Журнал подій</a></li>
+        <li><a href="admin_stats.html">Статистика</a></li>
+        <li><a href="admin_settings.html">Налаштування</a></li>
+        <li><a href="admin_backup.html">Резервна копія</a></li>
+        <li><a href="admin_logs.html">Журнал подій</a></li>
       </ul>
     </aside>
 
@@ -89,12 +89,12 @@
           <tr>
             <td>Коментарів на модерації</td>
             <td style="text-align: center;" class="status-alert"><b>5</b></td>
-            <td><a href="admin_comments.html">Переглянути</a></td>
+            <td><a href="admin_comments.html" data-tooltip="Перейти до модерації коментарів">Переглянути</a></td>
           </tr>
           <tr>
             <td>Нових повідомлень (форма)</td>
             <td style="text-align: center;" class="status-alert"><b>3</b></td>
-            <td><a href="admin_messages.html">Переглянути</a></td>
+            <td><a href="admin_messages.html" data-tooltip="Читати нові повідомлення з форми зворотного зв'язку">Переглянути</a></td>
           </tr>
         </tbody>
       </table>
@@ -102,16 +102,16 @@
       <h3>Швидкі дії</h3>
       <div class="quick-actions">
         <div class="quick-action-card">
-          <a href="admin_news_add.html">+ Додати новину</a>
+          <a href="admin_news_add.html" data-tooltip="Відкрити форму додавання нової публікації">+ Додати новину</a>
         </div>
         <div class="quick-action-card">
-          <a href="admin_staff_add.html">+ Додати викладача</a>
+          <a href="admin_staff_add.html" data-tooltip="Додати нового співробітника на сайт">+ Додати викладача</a>
         </div>
         <div class="quick-action-card">
-          <a href="admin_materials_add.html">+ Завантажити матеріал</a>
+          <a href="admin_materials_add.html" data-tooltip="Завантажити навчальні файли">+ Завантажити матеріал</a>
         </div>
         <div class="quick-action-card" style="background-color: #fff3cd; border-color: #ffeeba;">
-          <a href="admin_comments.html" style="color: #856404;">Модерувати коментарі (5)</a>
+          <a href="admin_comments.html" style="color: #856404;" data-tooltip="У вас є 5 неперевірених коментарів">Модерувати коментарі (5)</a>
         </div>
       </div>
 
@@ -160,5 +160,6 @@
     <p style="margin: 0;">Адміністративна панель © 2025 — Сайт кафедри КІТ НТУ</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
